@@ -85,19 +85,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1,
-      \ 'infolog' : 1,
-      \ 'mail' : 1
-      \}
+let g:ycm_key_invoke_completion = '<M-/>'
+let g:ycm_key_invoke_completion = '<C-Space>'
 nnoremap <F3> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
