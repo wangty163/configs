@@ -1,3 +1,40 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                         编码
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=UTF-8 
+"set langmenu=zh_CN.UTF-8 language message zh_CN.UTF-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""  
+"                     个人配置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+set rnu      "relative number
+set acd     "autochdir
+set si      "smartindent  
+set ts=4    "tabstop=4  
+set sw=4    "shiftwidth=4  
+set et      "expandtab  
+set sts=4   "softtabstop=4  
+
+syntax on
+filetype plugin indent on 
+"terminal Color
+set t_Co=256 
+
+
+
+
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""  
 "                     vundle配置 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -45,24 +82,8 @@ filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""  
-"                     个人配置 
+"                     主题配置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""" 
-set rnu      "relative number
-set acd     "autochdir
-set si      "smartindent  
-set ts=4    "tabstop=4  
-set sw=4    "shiftwidth=4  
-set et      "expandtab  
-set sts=4   "softtabstop=4  
-
-syntax on
-filetype plugin indent on 
-"terminal Color
-set t_Co=256 
-
-autocmd FileType nerdtree set norelativenumber
-autocmd FileType taglist set norelativenumber
-
 if has('gui_running')
     set background=dark
     colorscheme solarized
@@ -78,8 +99,10 @@ endif
 
 
 
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   YCM
+"                         YCM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -92,9 +115,14 @@ nnoremap <F3> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   NerdTree
+"                         NerdTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType nerdtree set norelativenumber
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc', 'tags', 'nohup.out']
 map<F11> :silent! NERDTreeToggle<CR>
 
@@ -102,19 +130,12 @@ map<F11> :silent! NERDTreeToggle<CR>
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   编码
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=UTF-8 
-"set langmenu=zh_CN.UTF-8 language message zh_CN.UTF-8
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-
 
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   快捷键
+"                         快捷键
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 "imap { {}<ESC>i<CR><ESC>O
 imap {<CR> {}<ESC>i<CR><ESC>O
@@ -140,7 +161,7 @@ endfun
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   ctags tagList
+"                     ctags tagList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tags=tags;/
 set autochdir
@@ -161,12 +182,12 @@ let Tlist_Use_Right_Window =1
 "noremap <F12> :TlistToggle<CR>
 
 let Tlist_Auto_Update = 1
-
+autocmd FileType taglist set norelativenumber
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	一键编译运行
+"	                一键编译运行
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F9> :call CompileRun()<CR>
 imap <F9> <ESC>:call CompileRun()<CR>
