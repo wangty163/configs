@@ -56,6 +56,7 @@ else
     colorscheme desert
 endif
 
+set cursorline
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
