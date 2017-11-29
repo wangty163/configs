@@ -28,6 +28,7 @@ filetype plugin indent on
 "terminal Color
 set t_Co=256 
 
+set cursorline
 
 
 
@@ -41,7 +42,6 @@ set t_Co=256
 set nocompatible              " be iMproved, required
 filetype on                  " required
 
-set cursorline
 " foldermethod
 " set fdm=indent
 
