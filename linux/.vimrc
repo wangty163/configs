@@ -141,6 +141,7 @@ map<F11> :silent! NERDTreeToggle<CR>
 imap {<CR> {}<ESC>i<CR><ESC>O
 "set pastetoggle=<F12>
 map <F12> :call TogglePaste() <CR>
+imap <F12> <ESC> :call TogglePaste() <CR>
 map! <F12> <ESC> :call TogglePaste() <CR>
 func! TogglePaste()
     exec ":TlistClose"
