@@ -1,0 +1,30 @@
+# Set default encoding using utf8
+defutf8 on
+ 
+## 解决中文乱码,这个要按需配置
+defencoding utf8
+encoding utf8 utf8
+ 
+#兼容shell 使得.bashrc .profile /etc/profile等里面的别名等设置生效
+shell -$SHELL
+ 
+#set the startup message
+startup_message off 
+term linux
+ 
+## 解决无法滚动
+termcapinfo xterm|xterms|xs ti@:te=\E[2J
+termcapinfo xterm* ti@:te@
+ 
+# 屏幕缓冲区行数
+defscrollback 10000
+ 
+# 下标签设置
+hardstatus on
+caption always "%{= kw}%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w %=%d %M %0c %{g}%H%{-}"
+ 
+#关闭闪屏
+vbell off
+
+# 重新载入配置文件
+bind r source "$HOME/.screenrc"
