@@ -28,3 +28,6 @@ vbell off
 
 # 重新载入配置文件
 bind r source "$HOME/.screenrc"
+
+# 默认使用zsh
+shell "/bin/zsh"
