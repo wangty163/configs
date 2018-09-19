@@ -12,33 +12,33 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                     个人配置
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-set rnu      "relative number
-set acd     "autochdir
-set si      "smartindent  
-set ts=4    "tabstop=4  
-set sw=4    "shiftwidth=4  
-set et      "expandtab  
-set sts=4   "softtabstop=4  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rnu              " relative number
+set acd              " autochdir
+set si               " smartindent
+set ts=4             " tabstop=4
+set sw=4             " shiftwidth=4
+set et               " expandtab
+set sts=4            " softtabstop=4
+set nocompatible     " use vim defaults (much better!)
+set incsearch        " search content when typing
+set cursorline
 
 syntax on
 filetype plugin indent on 
 "terminal Color
 set t_Co=256 
 
-set cursorline
 
 
 
 
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""  
-"                     vundle配置 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                     vundle配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype on                  " required
 
@@ -167,7 +167,7 @@ endfun
 set tags=tags;/
 set autochdir
 "更新ctags标签文件快捷键设置
-"map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F10> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 "启动vim后自动打开taglist窗口
 let Tlist_Auto_Open = 1
 "不同时显示多个文件的tag，仅显示一个
