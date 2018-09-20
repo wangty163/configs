@@ -24,6 +24,7 @@ set et               " expandtab
 set sts=4            " softtabstop=4
 set nocompatible     " use vim defaults (much better!)
 set incsearch        " search content when typing
+set hlsearch         " high light matches
 set cursorline
 
 syntax on
