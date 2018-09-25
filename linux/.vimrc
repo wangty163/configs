@@ -61,6 +61,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctags.vim'
 Bundle 'taglist.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -188,6 +191,33 @@ autocmd FileType taglist set norelativenumber
 
 
 
+
+
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	                airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 打开tabline功能
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" 安装字体后,设置
+let g:airline_powerline_fonts = 1
+" 映射切换buffer的键位
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+
+
+
+
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	                一键编译运行
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -202,7 +232,7 @@ exec "w"
     elseif expand('%:e') == "java"
         exec "!javac % && java %:r"
     elseif expand('%:e') == "py"
-        exec "!py %"
+        exec "!python3 %"
     elseif expand('%:e') == "sh"
         exec "!./%"
     endif
